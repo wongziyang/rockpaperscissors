@@ -34,3 +34,27 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+function game(){
+    let playerWins = 0;
+    let computerWins = 0;
+
+    for(let i = 0; i < 5; i++){
+        playerSelection = prompt('Please select Rock, Paper or Scissors.');
+        currentResult = playRound(playerSelection, computerPlay());
+        console.log(currentResult);
+        if(currentResult.includes('Win')){
+            playerWins++;
+        }else if(currentResult.includes('Lose')){
+            computerWins++;
+        }
+    }
+
+    if(playerWins > computerWins){
+        console.log('\nYou are the winner!');
+    }else if(computerWins > playerWins){
+        console.log('\nUnfortunately, the computer won. :(');
+    }else{
+        console.log('\nIt\'s a tie!');
+    }
+
+}
