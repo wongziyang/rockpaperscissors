@@ -5,6 +5,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection){
+    // Win variable, 0 for lost, 1 for draw, and 2 for win
     let win = 0;
 
     // Capitalize first letter and ensures the rest of the letters are lower case
